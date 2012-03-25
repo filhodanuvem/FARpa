@@ -19,6 +19,7 @@ Configuring
 ---------
 - Create the app on https://developers.facebook.com/apps 
 - On code, set the include_path using SplClassLoader. Look: 
+
     <?php
         set_include_path('/my/library' . PATH_SEPARATOR . '/path/to/lib' . PATH_SEPARATOR . get_include_path());
         require_once 'SplClassLoader.php';
@@ -26,6 +27,7 @@ Configuring
         $myLoader->register();
 
 - Define the app's constants like 
+
     <?php
         define('F_APP_ID',...);
         define('F_SECRET',...);
