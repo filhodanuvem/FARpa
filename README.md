@@ -18,6 +18,7 @@ TODO
 Configuring 
 ---------
 1) Create the app on https://developers.facebook.com/apps 
+
 2) On code, set the include_path using SplClassLoader. Look: 
 
     <?php
