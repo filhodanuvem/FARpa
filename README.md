@@ -44,14 +44,13 @@ Obs: you would only pass the Facebook object, yet configured to the FARpa's obje
 
 Using
 ---------
-
-   ```php
+```php
    
    <?php
         $user = new User;
         $user->load(); // $user is you facebook profile 
-   
-   ```php 
+        
+```php 
 
 License
 ===============
