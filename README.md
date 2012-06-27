@@ -1,4 +1,4 @@
-FARpa
+FARpa - Facebook Active Record with php
 ==============
 Project only to fun. It use PHP with active record pattern to search facebook data using 
 FQl.
@@ -12,7 +12,6 @@ Requirements
 
 TODO
 -------
-- Use lib GraphApi like a real dependencie.
 - To code the methods getAll, save, load and any method to inner join
 
 Download requirements
@@ -29,29 +28,29 @@ Configuring
 1) Create the app on https://developers.facebook.com/apps 
 
 2) We use, autoload.php generate by composer with
-   
+```php
     <?php
         require PATH_TO_VENDOR.'/autoload.php';   
-
+```
 
 3) Define the app's constants like 
+```php
 
     <?php
         define('F_APP_ID',...);
         define('F_SECRET',...);
-
+```
 Obs: you would only pass the Facebook object, yet configured to the FARpa's objects
 
 Using
 ---------
 
-   ```php
-   
+```php
+
    <?php
         $user = new User;
         $user->load(); // $user is you facebook profile 
-   
-   ```php 
+```
 
 License
 ===============
