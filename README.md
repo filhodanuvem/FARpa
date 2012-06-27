@@ -52,6 +52,14 @@ Using
         $user->load(); // $user is you facebook profile 
 ```
 
+=======
+```php
+   
+   <?php
+        $user = new User;
+        $user->load(); // $user is you facebook profile      
+```
+
 License
 ===============
 SimpleAnnotation    
