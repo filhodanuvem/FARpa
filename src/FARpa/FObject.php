@@ -4,10 +4,9 @@ namespace FARpa;
 
 abstract class FObject{
     protected $con;
-    public function __construct()
+    public function __construct($face = null)
     {
-        $this->con = FConnection::getConnection();
-        echo get_class($this);
+        $this->con = new FConnection($face);
     }
     
     public function getAll()
@@ -33,11 +32,29 @@ abstract class FObject{
         return $collection;
     }
     
-    public function execute($sql){
-        
+    public function execute($sql)
+    {
         return $this->con->face->api('/fql?q='.$sql);
     }
     
+    public function __call($method,$params)
+    {
+        if(substr($method,0,3) == 'get'){
+            return $this->get($method,$params);
+        }
+    }
+    
+    
+    private function get($method,$params)
+    {
+        $method = substr($method,3);
+        $class  = 'FARpa\\'.substr($method,0,strlen($method) - 1);
+        
+        $object = new $class;
+        return $object->getAll();        
+    }
     
     protected abstract function getFields();
+    
+    
 }

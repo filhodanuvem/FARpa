@@ -1,0 +1,9 @@
+{
+    "name": "FARpa",
+    "autoload" : {
+        "psr-0":{ "FARpa":"src/"}
+    }, 
+    "require":{
+        "facebook/php-sdk" : "*"
+    }
+}

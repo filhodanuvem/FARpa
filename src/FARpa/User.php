@@ -2,6 +2,7 @@
 
 namespace FARpa;
 
+
 class User extends FObject
 {
     
@@ -12,5 +13,7 @@ class User extends FObject
             'name','sex','username','contact_email','about_me','birthday_date','locale',
         );
     }
+    
+    
     
 }
