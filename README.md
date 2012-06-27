@@ -15,17 +15,24 @@ TODO
 - Use lib GraphApi like a real dependencie.
 - To code the methods getAll, save, load and any method to inner join
 
+Download requirements
+----------------------
+We'll use composer to manager our dependencies. 
+
+    curl -s http://getcomposer.org/installer | php
+    php composer.phar install 
+
+Now, we have all dependencies on project. 
+
 Configuring 
 ---------
 1) Create the app on https://developers.facebook.com/apps 
 
-2) On code, set the include_path using SplClassLoader. Look: 
-
+2) We use, autoload.php generate by composer with
+   
     <?php
-        set_include_path('/my/library' . PATH_SEPARATOR . '/path/to/lib' . PATH_SEPARATOR . get_include_path());
-        require_once 'SplClassLoader.php';
-        $myLoader = new \SplClassLoader();
-        $myLoader->register();
+        require PATH_TO_VENDOR.'/autoload.php';   
+
 
 3) Define the app's constants like 
 
@@ -33,12 +40,18 @@ Configuring
         define('F_APP_ID',...);
         define('F_SECRET',...);
 
+Obs: you would only pass the Facebook object, yet configured to the FARpa's objects
 
 Using
 ---------
 
-$user = new User();
-$user->load(); // $user is you facebook profile 
+   ```php
+   
+   <?php
+        $user = new User;
+        $user->load(); // $user is you facebook profile 
+   
+   ```php 
 
 License
 ===============
