@@ -48,10 +48,8 @@ Using
    
    <?php
         $user = new User;
-        $user->load(); // $user is you facebook profile 
-        
-```php 
-
+        $user->load(); // $user is you facebook profile      
+```
 License
 ===============
 SimpleAnnotation    
