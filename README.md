@@ -52,17 +52,19 @@ Using
         $user->load(); // $user is you facebook profile 
 ```
 
-=======
+TODO
+-----------
+
 ```php
-   
    <?php
-        $user = new User;
-        $user->load(); // $user is you facebook profile      
+       $user = new User;
+       $photo = $user->getAlbum(7)->getPhotoMoreLikes(); 
+       $photo->toCover(); 
 ```
 
 License
 ===============
-SimpleAnnotation    
+FARpa
 Copyright (C) 2012 Claudson Oliveira
 
 This program is free software: you can redistribute it and/or modify
